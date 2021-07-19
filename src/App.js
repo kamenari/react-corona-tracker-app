@@ -18,7 +18,7 @@ function App() {
       .then(res => res.json())
       .then(data => {
         setCountryData({
-          data: data[data.length -1].Data,
+          data: data[data.length -1].Date,
           newConfirmed: data[data.length -1].Confirmed - data[data.length -2].Confirmed,
           totalConfirmed: data[data.length -1].Confirmed,
           newRecovered: data[data.length -1].Recovered - data[data.length -2].Recovered,
