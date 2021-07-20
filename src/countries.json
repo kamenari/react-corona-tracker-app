@@ -1,5 +1,10 @@
 [
     {
+    "Country": "Japan",
+    "Slug": "japan",
+    "ISO2": "JP"
+    },
+    {
     "Country": "Spain",
     "Slug": "spain",
     "ISO2": "ES"
@@ -1148,11 +1153,6 @@
     "Country": "Denmark",
     "Slug": "denmark",
     "ISO2": "DK"
-    },
-    {
-    "Country": "Japan",
-    "Slug": "japan",
-    "ISO2": "JP"
     },
     {
     "Country": "Korea (North)",
