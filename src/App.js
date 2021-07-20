@@ -7,7 +7,7 @@ import './App.css';
 
 function App() {
   const [loading, setLoading] = useState(false);
-  const [country, setCountry] = useState("");
+  const [country, setCountry] = useState("japan");
   const [countryData, setCountryData] =useState({
     data: "",
     newConfirmed: "",
@@ -40,13 +40,16 @@ function App() {
     .catch(err => alert("エラーが発生しました。ページをリロードして、もう一度トライしてください。"));
   }
   useEffect(() => {
+    getCountryData();
+  }, [country]);
+  useEffect(() => {
     getAllCountriesData();
   }, []);
   return (
     <BrowserRouter>
       <Switch>
         <Route exact path="/">
-          <TopPage countriesJson={countriesJson} setCountry={setCountry} getCountryData={getCountryData} countryData={countryData} loading={loading} />
+          <TopPage countriesJson={countriesJson} setCountry={setCountry} countryData={countryData} loading={loading} />
         </Route>
         <Route exact path="/world">
           <WorldPage allCountriesData={allCountriesData} />
