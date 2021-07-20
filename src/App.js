@@ -14,6 +14,7 @@ function App() {
     totalConfirmed: "",
     newRecovered: "",
     totalRecovered: "",
+    countryName: "",
   });
   const [allCountriesData, setAllCountriesData] = useState([]);
 
@@ -28,6 +29,7 @@ function App() {
           totalConfirmed: data[data.length -1].Confirmed,
           newRecovered: data[data.length -1].Recovered - data[data.length -2].Recovered,
           totalRecovered: data[data.length -1].Recovered,
+          countryName: data[data.length -1].Country,
         });
         setLoading(false);
       })
